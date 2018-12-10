@@ -3,11 +3,7 @@
 function compare_item_start_time(a, b)
   local a_start_pos = reaper.GetMediaItemInfo_Value(a, "D_POSITION")
   local b_start_pos = reaper.GetMediaItemInfo_Value(b, "D_POSITION")
-  if a_start_pos <= b_start_pos then
-    return true
-  else
-    return false
-  end
+  return a_start_pos <= b_start_pos
 end
 
 -- get track items in order of start time
